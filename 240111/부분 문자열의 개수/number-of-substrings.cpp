@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
-#include <stack>
+#include <queue>
 
 using namespace std;
 
 int main() {
     int cnt = 0;
     string str1, str2;
-    stack<char> st;
+    queue<char> st;
     bool check = false;
 
     cin >> str1 >> str2;
@@ -18,13 +18,13 @@ int main() {
 
     while(!st.empty()){
         if (check){
-            if (st.top() == str2[1]){
+            if (st.front() == str2[1]){
                 cnt++;
             }
             check = false;
         }
 
-        if (st.top() == str2[0]){
+        if (st.front() == str2[0]){
             check = true;
             st.pop();
         }
