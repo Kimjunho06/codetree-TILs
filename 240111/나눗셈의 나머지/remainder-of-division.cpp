@@ -11,7 +11,7 @@ int main() {
         arr[i] = 0;
     }
 
-    while(n != 0){
+    while(n != 1){
         arr[n % m]++;
         n /= m;
     }
