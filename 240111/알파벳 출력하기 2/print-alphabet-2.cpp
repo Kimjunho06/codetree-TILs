@@ -13,6 +13,8 @@ int main() {
         for (int j = 0; j < n - value; j++){
             cout << (char)alpha << " ";
             alpha++;
+            if (alpha == 91)
+                alpha = 65;
         }
         value++;
         cout << "\n";
