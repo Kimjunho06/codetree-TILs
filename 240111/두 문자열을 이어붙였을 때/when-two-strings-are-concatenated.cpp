@@ -7,10 +7,11 @@ int main() {
     string str1, str2;
     cin >> str1 >> str2;
 
-    str2.erase(str2.find(str1));
-    if (str2.size() == 0) {
+    string comp1 = str1 + str2;
+    string comp2 = str2 + str1;
+
+    if (comp1 == comp2)
         cout << "true";
-    }
     else
         cout << "false";
 }
