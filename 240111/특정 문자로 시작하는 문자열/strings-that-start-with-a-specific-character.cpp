@@ -22,7 +22,12 @@ int main() {
         arr[str[0] - 'a']++;
     }
     cin >> str;
-
-    cout << arr[str[0] - 'a'] << " " << round(avg / n) << ".00";
+        
+    
+    cout << arr[str[0] - 'a'] << " "; 
+    
+    cout<<fixed;
+    cout.precision(2);
+    cout << round(avg / n);
 }
 //
