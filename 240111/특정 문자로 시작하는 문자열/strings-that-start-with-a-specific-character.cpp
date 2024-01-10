@@ -6,28 +6,28 @@ using namespace std;
 
 int main() {
     int n, cnt = 0;
-    int arr[30];
     float avg = 0;
+    string arr[21];
     string str;
 
     cin >> n;
-    for (int i = 0; i < 30; i++){
-        arr[i] = 0;
-    }
 
-    for (int i = 0 ; i < n; i++){
+    for (int i = 0; i < n; i++) {
         cin >> str;
-
-        avg += str.size();
-        arr[str[0] - 'a']++;
+        arr[i] = str;
     }
     cin >> str;
-        
-    
-    cout << arr[str[0] - 'a'] << " "; 
-    
-    cout<<fixed;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i][0] == str[0]) {
+            avg += arr[i].size();
+            cnt++;
+        }
+    }
+    cout << cnt << " ";
+
+    cout << fixed;
     cout.precision(2);
-    cout << round(avg / n);
+    cout << round(10 * (avg / cnt)) / 10;
 }
 //
