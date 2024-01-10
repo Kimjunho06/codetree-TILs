@@ -30,6 +30,6 @@ int main() {
 
     cout << fixed;
     cout.precision(2);
-    cout << round(10 * (avg / cnt)) / 10;
+    cout << round(100 * (avg / cnt)) / 100;
 }
 //
