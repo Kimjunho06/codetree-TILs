@@ -6,7 +6,7 @@ int main() {
     int n, m, multiple = 2;
     cin >> n >> m;
 
-    for (int i = 0; i < m; i++){
+    for (int i = 0; i < 4; i++){
         for (int j = m; j >= n; j--){
             cout << j << " * " << multiple << " = " << j * multiple;
             if (j == n) continue;
