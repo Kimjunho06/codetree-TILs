@@ -14,5 +14,5 @@ int main() {
         m *= 2;
     }
 
-    cout << n << " " << m
+    cout << n << " " << m;
 }
