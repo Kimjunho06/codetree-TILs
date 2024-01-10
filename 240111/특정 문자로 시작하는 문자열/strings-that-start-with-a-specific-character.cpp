@@ -9,6 +9,7 @@ int main() {
     float avg = 0;
     string arr[21];
     string str;
+    char a;
 
     cin >> n;
 
@@ -17,10 +18,10 @@ int main() {
         cin.clear();
         arr[i] = str;
     }
-    cin >> str;
+    cin >> a;
 
     for (int i = 0; i < n; i++) {
-        if (arr[i][0] == str[0]) {
+        if (arr[i][0] == a) {
             avg += arr[i].size();
             cnt++;
         }
