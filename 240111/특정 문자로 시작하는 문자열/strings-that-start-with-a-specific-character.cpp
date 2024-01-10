@@ -14,6 +14,7 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         cin >> str;
+        cin.clear();
         arr[i] = str;
     }
     cin >> str;
