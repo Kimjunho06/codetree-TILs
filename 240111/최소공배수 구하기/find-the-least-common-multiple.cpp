@@ -15,15 +15,13 @@ int main() {
         n = tmp;
     }
 
-    for (int i = 0; i < n; i++) {
-        Narr[i] = n * (i + 1);
-    }
-    for (int i = 0; i < m; i++) {
-        Marr[i] = m * (i + 1);
-    }
+    for (int i = 0; i < m; i++) Narr[i] = n * (i + 1);
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < n; i++) Marr[i] = m * (i + 1);
+
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
             if (Narr[i] == Marr[j]) {
                 cout << Narr[i];
                 return 0;
