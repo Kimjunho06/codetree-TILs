@@ -17,6 +17,13 @@ int main() {
     }
 
     while(!st.empty()){
+        if (check){
+            if (st.top() == str2[1]){
+                cnt++;
+            }
+            check = false;
+        }
+
         if (st.top() == str2[0]){
             check = true;
             st.pop();
@@ -25,12 +32,7 @@ int main() {
             st.pop();
         }
 
-        if (check){
-            if (st.top() == str2[1]){
-                cnt++;
-            }
-            check = false;
-        }
+
     }
 
     cout << cnt;
