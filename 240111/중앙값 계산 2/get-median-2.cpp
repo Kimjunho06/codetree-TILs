@@ -13,8 +13,8 @@ int main() {
         cin >> arr[i];
         cnt++;
 
-        if (i % 3 == 1) continue;
-        
+        if (i % 2== 1) continue;
+
         sort(arr, arr + cnt);
         cout << arr[cnt / 2] << " ";
     }
