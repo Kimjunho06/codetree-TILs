@@ -36,7 +36,7 @@ int main()
         answer++;
     if (s == "Tue" && temp >= 1)
         answer++;
-    if (s == "Wen" && temp >= 2)
+    if (s == "Wed" && temp >= 2)
         answer++;
     if (s == "Thu" && temp >= 3)
         answer++;
