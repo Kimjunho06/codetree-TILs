@@ -28,6 +28,9 @@ int DFS(int x, int y) {
 		}
 	}
 
+	if (cnt == 0)
+		return 1;
+
 	return cnt;
 }
 
