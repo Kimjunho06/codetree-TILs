@@ -55,7 +55,7 @@ int main() {
 			if (visited[i][j] == false)
 			{
 				cnt = 1;
-				tmp = DFS(i, j);
+				tmp = DFS(j, i);
 				if (tmp >= 4) block_cnt++;
 				if (tmp > max) max = tmp;
 
