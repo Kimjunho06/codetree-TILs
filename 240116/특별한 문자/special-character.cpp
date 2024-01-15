@@ -19,16 +19,17 @@ int main() {
 		}
 	}
 
-	char answer = ' ';
+	int cnt = 0;
 	for (auto a : mp) {
 		if (a.second > 1) continue;
-
-		answer = a.first;
-		break;
+		
+		cnt++;
 	}
 
-	if (answer == ' ')
+	if (cnt == 0) {
 		cout << "None";
-	else
-		cout << answer;
+	}
+	else {
+		cout << str[0];
+	}
 }
