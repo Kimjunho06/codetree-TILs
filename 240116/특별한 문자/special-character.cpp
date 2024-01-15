@@ -19,17 +19,15 @@ int main() {
 		}
 	}
 
-	int cnt = 0;
+	string answer = "";
 	for (auto a : mp) {
 		if (a.second > 1) continue;
-		
-		cnt++;
+
+		answer += a.first;
 	}
 
-	if (cnt == 0) {
+	if (answer == "")
 		cout << "None";
-	}
-	else {
-		cout << str[0];
-	}
+	else
+		cout << answer[answer.size() - 1];
 }
