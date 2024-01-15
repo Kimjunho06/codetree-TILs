@@ -23,11 +23,11 @@ int main() {
 	for (auto a : mp) {
 		if (a.second > 1) continue;
 
-		answer += a.first;
+		answer = a.first;
 	}
 
 	if (answer == "")
 		cout << "None";
 	else
-		cout << answer[answer.size() - 1];
+		cout << answer;
 }
