@@ -4,13 +4,13 @@
 using namespace std;
 
 int main() {
-	int n;
-	int key, value;
-	unordered_map<int, int> mp;
+	long long n;
+	long long key, value;
+	unordered_map<long long, long long> mp;
 
 	cin >> n;
 
-	for (int i = 0; i < n; i++)
+	for (long long i = 0; i < n; i++)
 	{
 		cin >> key >> value;
 
@@ -22,7 +22,7 @@ int main() {
 		}
 	}
 
-	int sum = 0;
+	long long sum = 0;
 	for (auto a : mp) {
 		sum += a.second;
 	}
