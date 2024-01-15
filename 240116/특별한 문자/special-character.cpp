@@ -23,11 +23,16 @@ int main() {
 	for (auto a : mp) {
 		if (a.second > 1) continue;
 
-		answer = a.first;
+		answer += a.first;
 	}
 
-	if (answer == "")
+	int idx = 100001;
+	for (auto a : answer) {
+		idx = min(idx, (int)str.find(a));
+	}
+
+	if (idx == 100001)
 		cout << "None";
 	else
-		cout << answer;
+		cout << str[idx];
 }
