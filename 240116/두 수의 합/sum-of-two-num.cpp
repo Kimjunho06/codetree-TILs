@@ -1,49 +1,44 @@
 #include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <queue>
+#include <stack>
+#include <set>
 #include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <climits>
 
 using namespace std;
 
-int f(int n) {
-	if (n == 1) return 1;
+int main()
+{
+    unordered_map<long long, long long> um;
+    long long n, m, input;
+    cin >> n >> m;
+    for (long long i = 0; i < n; i++)
+    {
+        cin >> input;
+        um[input]++;
+    }
 
-	return n + f(n - 1);
-}
-
-int main() {
-	int n, k;
-	long long answer = 0;
-	map<long long, int> mp;
-
-	cin >> n >> k;
-	for (int i = 0; i < n; i++) {
-		long long input;
-
-		cin >> input;
-
-		if (mp.find(input) != mp.end()) {
-			mp.find(input)->second++;
-		}
-		else {
-			mp.insert({ input, 1 });
-		}
-	}
-
-	for (auto a : mp) {
-		if (a.first == k / 2) {
-			answer += f(a.second - 1) * 2;
-		}
-		else {
-			if (mp.find(k - a.first) != mp.end()) {
-				int fcnt = a.second;
-				int scnt = mp.find(k - a.first)->second;
-
-				if (fcnt == scnt)
-					answer += fcnt;
-				else
-					answer += fcnt * scnt;
-			}
-		}
-	}
-
-	cout << answer / 2;
+    long long answer = 0;
+    for (auto i : um)
+    {
+        long long a = m - i.first;
+        if (a == i.first)
+        {
+            for (long long j = 1; j < um[a]; j++)
+                answer += j;
+        }
+        else
+        {
+            answer += um[a] * um[i.first];
+        }
+        um[a] = 0;
+        um[i.first] = 0;
+    }
+    cout << answer;
 }
