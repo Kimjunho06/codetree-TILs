@@ -3,6 +3,12 @@
 
 using namespace std;
 
+int f(int n) {
+	if (n == 1) return 1;
+
+	return n + f(n - 1);
+}
+
 int main() {
 	int n, k;
 	long long answer = 0;
@@ -23,14 +29,19 @@ int main() {
 	}
 
 	for (auto a : mp) {
-		if (mp.find(k - a.first) != mp.end()) {
-			int fcnt = a.second;
-			int scnt = mp.find(k - a.first)->second;
-			
-			if (fcnt == scnt)
-				answer += fcnt;
-			else
-				answer += abs(fcnt - scnt);
+		if (a.first == k / 2) {
+			answer += f(a.second - 1) * 2;
+		}
+		else {
+			if (mp.find(k - a.first) != mp.end()) {
+				int fcnt = a.second;
+				int scnt = mp.find(k - a.first)->second;
+
+				if (fcnt == scnt)
+					answer += fcnt;
+				else
+					answer += fcnt * scnt;
+			}
 		}
 	}
 
