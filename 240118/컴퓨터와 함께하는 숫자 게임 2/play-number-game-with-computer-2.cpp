@@ -22,7 +22,7 @@ long long f(int num) {
 		if (mid > num) {
 			right = mid - 1;
 		}
-		else if (mid < num) {
+		if (mid < num) {
 			left = mid + 1;
 		}
 
