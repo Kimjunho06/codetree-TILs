@@ -3,12 +3,12 @@
 
 using namespace std;
 
-int n, a, b;
+long long n, a, b;
 
-int f(int num) {
-	int left = 1, right = n;
-	int cnt = 1;
-	int mid = 0;
+long long f(int num) {
+	long long left = 1, right = n;
+	long long cnt = 1;
+	long long mid = 0;
 
 	while (left <= right)
 	{
@@ -35,11 +35,11 @@ int f(int num) {
 int main() {
 	cin >> n >> a >> b;
 
-	int maxvalue = 0;
-	int minvalue = INT_MAX;
+	long long maxvalue = 0;
+	long long minvalue = INT_MAX;
 
-	for (int i = a; i <= b; i++) {
-		int result = f(i);
+	for (long long i = a; i <= b; i++) {
+		long long result = f(i);
 
 		maxvalue = max(result, maxvalue);
 		minvalue = min(result, minvalue);
