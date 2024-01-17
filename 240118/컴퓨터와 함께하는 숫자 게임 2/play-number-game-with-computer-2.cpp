@@ -5,7 +5,7 @@ using namespace std;
 
 long long n, a, b;
 
-long long f(int num) {
+long long f(long long num) {
 	long long left = 1, right = n;
 	long long cnt = 1;
 	long long mid = 0;
